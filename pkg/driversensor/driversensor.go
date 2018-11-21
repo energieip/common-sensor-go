@@ -16,29 +16,30 @@ const (
 
 //Sensor driver representation
 type Sensor struct {
-	ID                         string  `gorethink:"id,omitempty" json:"ID"`
-	Mac                        string  `gorethink:"mac" json:"mac"`
-	Group                      int     `gorethink:"group" json:"group"`
-	Protocol                   string  `gorethink:"protocol" json:"protocol"`
-	Topic                      string  `gorethink:"topic" json:"topic"`
-	SwitchMac                  string  `gorethink:"switch_mac" json:"switchMac"`
-	IsConfigured               bool    `gorethink:"is_configured" json:"isConfigured"`
-	Version                    float32 `gorethink:"version" json:"version"`
-	IsBleEnabled               bool    `gorethink:"is_ble_enabled" json:"isBleEnabled"`
-	Temperature                int     `gorethink:"temperature" json:"temperature"`
-	Error                      int     `gorethink:"error" json:"error"`
-	ResetNumbers               int     `gorethink:"reset_numbers" json:"resetNumbers"`
-	InitialSetupDate           float64 `gorethink:"initial_setup_date" json:"initialSetupDate"`
-	LastResetDate              float64 `gorethink:"last_reset_date" json:"lastResetDate"`
-	Brigthness                 int     `gorethink:"brightness" json:"brightness"`
-	Presence                   bool    `gorethink:"presence" json:"presence"`
-	BrigthnessCorrectionFactor int     `gorethink:"brigthness_correction_factor" json:"brigthnessCorrectionFactor"`
-	ThresoldPresence           int     `gorethink:"thresold_presence" json:"thresoldPresence"`
-	TemperatureOffset          int     `gorethink:"temperature_offset" json:"temperatureOffset"`
-	BrigthnessRaw              int     `gorethink:"brightness_raw" json:"brigthnessRaw"`
-	LastMovment                int     `gorethink:"last_movement" json:"lastMovement"`
-	VoltageInput               int     `gorethink:"voltage_input" json:"voltageInput"`
-	TemperatureRaw             int     `gorethink:"temperature_raw" json:"temperatureRaw"`
+	ID                         string  `json:"ID,omitempty"`
+	IP                         string  `json:"ip"`
+	Mac                        string  `json:"mac"`
+	Group                      int     `json:"group"`
+	Protocol                   string  `json:"protocol"`
+	Topic                      string  `json:"topic"`
+	SwitchMac                  string  `json:"switchMac"`
+	IsConfigured               bool    `json:"isConfigured"`
+	Version                    float32 `json:"version"`
+	IsBleEnabled               bool    `json:"isBleEnabled"`
+	Temperature                int     `json:"temperature"`
+	Error                      int     `json:"error"`
+	ResetNumbers               int     `json:"resetNumbers"`
+	InitialSetupDate           float64 `json:"initialSetupDate"`
+	LastResetDate              float64 `json:"lastResetDate"`
+	Brigthness                 int     `json:"brightness"`
+	Presence                   bool    `json:"presence"`
+	BrigthnessCorrectionFactor int     `json:"brigthnessCorrectionFactor"`
+	ThresoldPresence           int     `json:"thresoldPresence"`
+	TemperatureOffset          int     `json:"temperatureOffset"`
+	BrigthnessRaw              int     `json:"brigthnessRaw"`
+	LastMovment                int     `json:"lastMovement"`
+	VoltageInput               int     `json:"voltageInput"`
+	TemperatureRaw             int     `json:"temperatureRaw"`
 }
 
 //SensorSetup initial setup send by the server when the driver is authorized
