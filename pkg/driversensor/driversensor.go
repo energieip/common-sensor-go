@@ -63,14 +63,6 @@ type SensorConf struct {
 	IsBleEnabled               *bool  `json:"isBleEnabled"`
 }
 
-// ToMapInterface convert sensor struct in Map[string] interface{}
-func (sensor Sensor) ToMapInterface() map[string]interface{} {
-	var inInterface map[string]interface{}
-	inrec, _ := json.Marshal(sensor)
-	json.Unmarshal(inrec, &inInterface)
-	return inInterface
-}
-
 //ToSensor convert interface to Sensor object
 func ToSensor(val interface{}) (*Sensor, error) {
 	var cell Sensor
