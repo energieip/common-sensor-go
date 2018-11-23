@@ -75,6 +75,17 @@ func ToSensor(val interface{}) (*Sensor, error) {
 	return &cell, err
 }
 
+//ToSensorSetup convert interface to SensorSetup object
+func ToSensorSetup(val interface{}) (*SensorSetup, error) {
+	var cell SensorSetup
+	inrec, err := json.Marshal(val)
+	if err != nil {
+		return nil, err
+	}
+	err = json.Unmarshal(inrec, &cell)
+	return &cell, err
+}
+
 // ToJSON dump sensor struct
 func (sensor Sensor) ToJSON() (string, error) {
 	inrec, err := json.Marshal(sensor)
