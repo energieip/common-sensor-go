@@ -41,27 +41,30 @@ type Sensor struct {
 	LastMovment                int     `json:"lastMovement"`
 	VoltageInput               int     `json:"voltageInput"`
 	TemperatureRaw             int     `json:"temperatureRaw"`
+	FriendlyName               string  `json:"friendlyName"`
 }
 
 //SensorSetup initial setup send by the server when the driver is authorized
 type SensorSetup struct {
-	Mac                        string `json:"mac"`
-	Group                      *int   `json:"group"`
-	BrigthnessCorrectionFactor *int   `json:"brigthnessCorrectionFactor"`
-	ThresoldPresence           *int   `json:"thresoldPresence"`
-	TemperatureOffset          *int   `json:"temperatureOffset"`
-	IsBleEnabled               *bool  `json:"isBleEnabled"`
+	Mac                        string  `json:"mac"`
+	Group                      *int    `json:"group"`
+	BrigthnessCorrectionFactor *int    `json:"brigthnessCorrectionFactor"`
+	ThresoldPresence           *int    `json:"thresoldPresence"`
+	TemperatureOffset          *int    `json:"temperatureOffset"`
+	IsBleEnabled               *bool   `json:"isBleEnabled"`
+	FriendlyName               *string `json:"friendlyName"`
 }
 
 //SensorConf customizable configuration by the server
 type SensorConf struct {
-	Mac                        string `json:"mac"`
-	Group                      *int   `json:"group"`
-	BrigthnessCorrectionFactor *int   `json:"brigthnessCorrectionFactor"`
-	IsConfigured               *bool  `json:"isConfigured"`
-	ThresoldPresence           *int   `json:"thresoldPresence"`
-	TemperatureOffset          *int   `json:"temperatureOffset"`
-	IsBleEnabled               *bool  `json:"isBleEnabled"`
+	Mac                        string  `json:"mac"`
+	Group                      *int    `json:"group"`
+	BrigthnessCorrectionFactor *int    `json:"brigthnessCorrectionFactor"`
+	IsConfigured               *bool   `json:"isConfigured"`
+	ThresoldPresence           *int    `json:"thresoldPresence"`
+	TemperatureOffset          *int    `json:"temperatureOffset"`
+	IsBleEnabled               *bool   `json:"isBleEnabled"`
+	FriendlyName               *string `json:"friendlyName"`
 }
 
 //ToSensor convert interface to Sensor object
