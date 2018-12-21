@@ -53,6 +53,7 @@ type SensorSetup struct {
 	TemperatureOffset          *int    `json:"temperatureOffset"`
 	IsBleEnabled               *bool   `json:"isBleEnabled"`
 	FriendlyName               *string `json:"friendlyName"`
+	SwitchMac                  string  `json:"switchMac"`
 }
 
 //SensorConf customizable configuration by the server
