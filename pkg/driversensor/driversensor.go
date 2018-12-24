@@ -43,6 +43,7 @@ type Sensor struct {
 	VoltageInput               int     `json:"voltageInput"`
 	TemperatureRaw             int     `json:"temperatureRaw"`
 	FriendlyName               string  `json:"friendlyName"`
+	DumpFrequency              int     `json:"dumpFrequency"`
 }
 
 //SensorSetup initial setup send by the server when the driver is authorized
@@ -56,6 +57,7 @@ type SensorSetup struct {
 	FriendlyName               *string `json:"friendlyName"`
 	SwitchMac                  string  `json:"switchMac"`
 	IsConfigured               *bool   `json:"isConfigured"`
+	DumpFrequency              int     `json:"dumpFrequency"`
 }
 
 //SensorConf customizable configuration by the server
@@ -68,6 +70,7 @@ type SensorConf struct {
 	TemperatureOffset          *int    `json:"temperatureOffset"`
 	IsBleEnabled               *bool   `json:"isBleEnabled"`
 	FriendlyName               *string `json:"friendlyName"`
+	DumpFrequency              *int    `json:"dumpFrequency"`
 }
 
 //ToSensor convert interface to Sensor object
