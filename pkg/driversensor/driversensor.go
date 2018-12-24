@@ -55,6 +55,7 @@ type SensorSetup struct {
 	IsBleEnabled               *bool   `json:"isBleEnabled"`
 	FriendlyName               *string `json:"friendlyName"`
 	SwitchMac                  string  `json:"switchMac"`
+	IsConfigured               *bool   `json:"isConfigured"`
 }
 
 //SensorConf customizable configuration by the server
