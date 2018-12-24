@@ -28,6 +28,7 @@ type Sensor struct {
 	HardwareVersion            string  `json:"hardwareVersion"`
 	IsBleEnabled               bool    `json:"isBleEnabled"`
 	Temperature                int     `json:"temperature"`
+	Humidity                   int     `json:"humidity"`
 	Error                      int     `json:"error"`
 	ResetNumbers               int     `json:"resetNumbers"`
 	InitialSetupDate           float64 `json:"initialSetupDate"`
