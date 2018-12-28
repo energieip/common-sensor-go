@@ -39,7 +39,7 @@ type Sensor struct {
 	ThresoldPresence           int     `json:"thresoldPresence"`
 	TemperatureOffset          int     `json:"temperatureOffset"`
 	BrightnessRaw              int     `json:"brightnessRaw"`
-	LastMovment                int     `json:"lastMovement"`
+	LastMovement               int     `json:"lastMovement"`
 	VoltageInput               int     `json:"voltageInput"`
 	TemperatureRaw             int     `json:"temperatureRaw"`
 	FriendlyName               string  `json:"friendlyName"`
