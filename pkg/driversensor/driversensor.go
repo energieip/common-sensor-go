@@ -33,12 +33,12 @@ type Sensor struct {
 	ResetNumbers               int     `json:"resetNumbers"`
 	InitialSetupDate           float64 `json:"initialSetupDate"`
 	LastResetDate              float64 `json:"lastResetDate"`
-	Brigthness                 int     `json:"brightness"`
+	Brightness                 int     `json:"brightness"`
 	Presence                   bool    `json:"presence"`
-	BrigthnessCorrectionFactor int     `json:"brigthnessCorrectionFactor"`
+	BrightnessCorrectionFactor int     `json:"brightnessCorrectionFactor"`
 	ThresoldPresence           int     `json:"thresoldPresence"`
 	TemperatureOffset          int     `json:"temperatureOffset"`
-	BrigthnessRaw              int     `json:"brigthnessRaw"`
+	BrightnessRaw              int     `json:"brightnessRaw"`
 	LastMovment                int     `json:"lastMovement"`
 	VoltageInput               int     `json:"voltageInput"`
 	TemperatureRaw             int     `json:"temperatureRaw"`
@@ -50,7 +50,7 @@ type Sensor struct {
 type SensorSetup struct {
 	Mac                        string  `json:"mac"`
 	Group                      *int    `json:"group"`
-	BrigthnessCorrectionFactor *int    `json:"brigthnessCorrectionFactor"`
+	BrightnessCorrectionFactor *int    `json:"brightnessCorrectionFactor"`
 	ThresoldPresence           *int    `json:"thresoldPresence"`
 	TemperatureOffset          *int    `json:"temperatureOffset"`
 	IsBleEnabled               *bool   `json:"isBleEnabled"`
@@ -64,7 +64,7 @@ type SensorSetup struct {
 type SensorConf struct {
 	Mac                        string  `json:"mac"`
 	Group                      *int    `json:"group"`
-	BrigthnessCorrectionFactor *int    `json:"brigthnessCorrectionFactor"`
+	BrightnessCorrectionFactor *int    `json:"brightnessCorrectionFactor"`
 	IsConfigured               *bool   `json:"isConfigured"`
 	ThresoldPresence           *int    `json:"thresoldPresence"`
 	TemperatureOffset          *int    `json:"temperatureOffset"`
