@@ -49,28 +49,28 @@ type Sensor struct {
 //SensorSetup initial setup send by the server when the driver is authorized
 type SensorSetup struct {
 	Mac                        string  `json:"mac"`
-	Group                      *int    `json:"group"`
-	BrightnessCorrectionFactor *int    `json:"brightnessCorrectionFactor"`
-	ThresholdPresence          *int    `json:"thresholdPresence"`
-	TemperatureOffset          *int    `json:"temperatureOffset"`
-	IsBleEnabled               *bool   `json:"isBleEnabled"`
-	FriendlyName               *string `json:"friendlyName"`
+	Group                      *int    `json:"group,omitempty"`
+	BrightnessCorrectionFactor *int    `json:"brightnessCorrectionFactor,omitempty"`
+	ThresholdPresence          *int    `json:"thresholdPresence,omitempty"`
+	TemperatureOffset          *int    `json:"temperatureOffset,omitempty"`
+	IsBleEnabled               *bool   `json:"isBleEnabled,omitempty"`
+	FriendlyName               *string `json:"friendlyName,omitempty"`
 	SwitchMac                  string  `json:"switchMac"`
-	IsConfigured               *bool   `json:"isConfigured"`
+	IsConfigured               *bool   `json:"isConfigured,omitempty"`
 	DumpFrequency              int     `json:"dumpFrequency"`
 }
 
 //SensorConf customizable configuration by the server
 type SensorConf struct {
 	Mac                        string  `json:"mac"`
-	Group                      *int    `json:"group"`
-	BrightnessCorrectionFactor *int    `json:"brightnessCorrectionFactor"`
-	IsConfigured               *bool   `json:"isConfigured"`
-	ThresholdPresence          *int    `json:"thresholdPresence"`
-	TemperatureOffset          *int    `json:"temperatureOffset"`
-	IsBleEnabled               *bool   `json:"isBleEnabled"`
-	FriendlyName               *string `json:"friendlyName"`
-	DumpFrequency              *int    `json:"dumpFrequency"`
+	Group                      *int    `json:"group,omitempty"`
+	BrightnessCorrectionFactor *int    `json:"brightnessCorrectionFactor,omitempty"`
+	IsConfigured               *bool   `json:"isConfigured,omitempty"`
+	ThresholdPresence          *int    `json:"thresholdPresence,omitempty"`
+	TemperatureOffset          *int    `json:"temperatureOffset,omitempty"`
+	IsBleEnabled               *bool   `json:"isBleEnabled,omitempty"`
+	FriendlyName               *string `json:"friendlyName,omitempty"`
+	DumpFrequency              *int    `json:"dumpFrequency,omitempty"`
 }
 
 //ToSensor convert interface to Sensor object
