@@ -25,14 +25,11 @@ type Sensor struct {
 	SwitchMac                  string  `json:"switchMac"`
 	IsConfigured               bool    `json:"isConfigured"`
 	SoftwareVersion            float32 `json:"softwareVersion"`
-	HardwareVersion            string  `json:"hardwareVersion"`
+	HardwareVersion            float32 `json:"hardwareVersion"`
 	IsBleEnabled               bool    `json:"isBleEnabled"`
 	Temperature                int     `json:"temperature"`
 	Humidity                   int     `json:"humidity"`
 	Error                      int     `json:"error"`
-	ResetNumbers               int     `json:"resetNumbers"`
-	InitialSetupDate           float64 `json:"initialSetupDate"`
-	LastResetDate              float64 `json:"lastResetDate"`
 	Brightness                 int     `json:"brightness"`
 	Presence                   bool    `json:"presence"`
 	BrightnessCorrectionFactor int     `json:"brightnessCorrectionFactor"`
